@@ -1,6 +1,5 @@
 const currentWeather = (() => {
   function getSpecificData(databylatlon) {
-    const city = databylatlon.name;
     const temperature = databylatlon.main.temp;
     const feelslike = databylatlon.main.feels_like;
     const airhumidity = databylatlon.main.humidity;
@@ -8,7 +7,7 @@ const currentWeather = (() => {
     const weatherdescription = databylatlon.weather[0].description;
 
     return {
-      city, temperature, feelslike, airhumidity, wind, weatherdescription,
+      temperature, feelslike, airhumidity, wind, weatherdescription,
     };
   }
 
