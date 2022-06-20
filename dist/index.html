@@ -8,9 +8,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input type="text" name="choosecity" id="choosecity">
-    <button id="getweather">Get Weather</button>
     <script src="main.js" defer></script>
+    <div id="currentweatherbox">
+        <div id="inputbox"> 
+            <input type="text" name="choosecity" id="choosecity">
+            <button id="getweather">Get Weather</button>
+        </div>
+        <div id="currenttime"></div>
+        <div id="city"></div>
+        <div class="current" id="descriptionbox">
+            <div id="description"></div>
+        </div>
+        <div class="current" class="tempbox">
+            <div>Temperature</div>
+            <div id="temp"></div>
+        </div>
+        <div class="current" id="feelslikebox">
+            <div>Feels like</div>
+            <div id="feelslike"></div>
+        </div>
+        <div class="current" id="humiditybox">
+            <div>Humidity</div>
+            <div id="humidity"></div>
+        </div>
+        <div class="current" id="windbox">
+            <div>Wind speed</div>
+            <div id="wind"></div>
+        </div>
+    </div>
+    <div id="dailyweatherbox">
+
+    </div>
     
 </body>
 </html>
