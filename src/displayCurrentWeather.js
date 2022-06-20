@@ -1,6 +1,6 @@
 import { format } from 'date-fns';
 
-const displayWeather = (currentWeatherResult) => {
+const displayCurrentWeather = (currentWeatherResult) => {
   const currenttime = document.getElementById('currenttime');
   const city = document.getElementById('city');
   const description = document.getElementById('description');
@@ -21,4 +21,4 @@ const displayWeather = (currentWeatherResult) => {
   windspeed.innerText = `${currentWeatherResult.wind} m/s`;
 };
 
-export default displayWeather;
+export default displayCurrentWeather;
