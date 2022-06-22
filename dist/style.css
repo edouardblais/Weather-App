@@ -1,0 +1,28 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+#currentweatherbox, #dailyweatherbox {
+    height: 45vh;
+    width: 100vw;
+}
+
+#header, #footer {
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+#footer {
+    justify-content: center;
+}

@@ -1,10 +1,10 @@
 const displayDailyWeather = (dailyWeatherResults) => {
-  const timebox = document.getElementById('timebox');
-  const descriptionbox = document.getElementById('descriptionbox');
-  const tempbox = document.getElementById('tempbox');
-  const feelslikebox = document.getElementById('feelslikebox');
-  const humiditybox = document.getElementById('humiditybox');
-  const windbox = document.getElementById('windbox');
+  const timebox = document.getElementById('dailytimebox');
+  const descriptionbox = document.getElementById('dailydescriptionbox');
+  const tempbox = document.getElementById('dailytempbox');
+  const feelslikebox = document.getElementById('dailyfeelslikebox');
+  const humiditybox = document.getElementById('dailyhumiditybox');
+  const windbox = document.getElementById('dailywindbox');
   let time = 3;
 
   for (let i = 0; i < 40; i += 1) {

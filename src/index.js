@@ -11,3 +11,12 @@ button.addEventListener('click', async () => {
   const dailyWeatherResults = await dailyWeather.getAPIData(input.value);
   displayDailyWeather(dailyWeatherResults);
 });
+
+const defaultWeatherDisplay = (async () => {
+  const defaultcurrentweather = await currentWeather.getAPIData('montreal');
+  const defaultdailyweather = await dailyWeather.getAPIData('montreal');
+  displayCurrentWeather(defaultcurrentweather);
+  displayDailyWeather(defaultdailyweather);
+});
+
+defaultWeatherDisplay();
