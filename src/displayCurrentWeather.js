@@ -13,7 +13,7 @@ const displayCurrentWeather = (currentWeatherResult) => {
   const today = format(new Date(), 'Pp');
   currenttime.innerText = today;
 
-  city.innerText = input;
+  city.innerText = input || 'montreal';
   description.innerText = currentWeatherResult.weatherdescription;
   temp.innerText = `${(currentWeatherResult.temperature - 273.15).toFixed(0)} °C`;
   feelsliketemp.innerText = `${(currentWeatherResult.feelslike - 273.15).toFixed(0)} °C`;
