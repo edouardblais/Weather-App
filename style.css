@@ -9,11 +9,70 @@ body {
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    background-image: url('image/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
 }
 
 #currentweatherbox, #dailyweatherbox {
     height: 45vh;
     width: 100vw;
+}
+
+#currentweatherbox {
+    display: grid;
+    grid-template-areas: 
+    'city inputbox currenttemperature'
+    'currenttime . currentfeelslike'
+    'currentdescription . currenthumidity'
+    '. . currentwind';
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+#city {
+    grid-area: city;
+}
+
+#inputbox {
+    grid-area: inputbox;
+}
+
+#currentdescriptionbox {
+    grid-area: currentdescription;
+}
+
+#currentfeelslikebox {
+    grid-area: currentfeelslike;
+}
+
+#currentime {
+    grid-area: currenttime;
+}
+
+#currenthumiditybox {
+    grid-area: currenthumidity;
+}
+
+#currenttempbox {
+    grid-area: currenttemperature;
+}
+
+#currentwindbox {
+    grid-area: currentwind;
+}
+
+#dailyweatherbox {
+    display: flex;
+    flex-direction: column;
+}
+
+#dailytimebox, #dailytempbox, #dailydescriptionbox, #dailyfeelslikebox, #dailyhumiditybox, #dailywindbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 #header, #footer {
