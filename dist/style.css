@@ -2,6 +2,8 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 2vh;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -17,7 +19,6 @@ body {
 }
 
 #currentweatherbox, #dailyweatherbox {
-    height: 45vh;
     width: 100vw;
 }
 
@@ -30,26 +31,35 @@ body {
     '. . currentwind';
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 45vh;
+    justify-items:flex-start;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    align-items: center;
 }
 
 #city {
     grid-area: city;
+    padding-left: 3vw;
 }
 
 #inputbox {
     grid-area: inputbox;
+    justify-self: center;
 }
 
 #currentdescriptionbox {
     grid-area: currentdescription;
+    padding-left: 3vw;
 }
 
 #currentfeelslikebox {
     grid-area: currentfeelslike;
 }
 
-#currentime {
+#currenttime {
     grid-area: currenttime;
+    padding-left: 3vw;
 }
 
 #currenthumiditybox {
@@ -64,24 +74,56 @@ body {
     grid-area: currentwind;
 }
 
+#dailycontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+#dailytitles {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    padding-left: 3vw;
+}
+
+.dailytitle {
+    height: 4vh;
+}
+
 #dailyweatherbox {
     display: flex;
     flex-direction: column;
+    overflow-x: scroll;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    gap:3vh;
+    flex-grow: 1;
+    height: 40vh;
 }
 
 #dailytimebox, #dailytempbox, #dailydescriptionbox, #dailyfeelslikebox, #dailyhumiditybox, #dailywindbox {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    height: 4vh;
+}
+
+.singleweatherbox {
+    min-width: 11vw;
 }
 
 #header, #footer {
-    height: 5vh;
     width: 100vw;
     display: flex;
     align-items: center;
 }
 
+#header {
+    height: 10vh;
+    padding-left: 3vw;
+}
+
 #footer {
     justify-content: center;
+    height: 5vh;
 }
