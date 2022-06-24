@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    </style>
 </head>
 <body>
     <script src="main.js" defer></script>
@@ -37,13 +40,23 @@
             <div id="wind"></div>
         </div>
     </div>
-    <div id="dailyweatherbox">
-        <div id="dailytimebox"></div>
-        <div id="dailydescriptionbox"></div>
-        <div id="dailytempbox"></div>
-        <div id="dailyfeelslikebox"></div>
-        <div id="dailyhumiditybox"></div>
-        <div id="dailywindbox"></div>
+    <div id="dailycontainer">
+        <div id="dailytitles">
+            <div class="dailytitle">Time</div>
+            <div class="dailytitle">Description</div>
+            <div class="dailytitle">Temperature</div>
+            <div class="dailytitle">Feels like</div>
+            <div class="dailytitle">Humidity</div>
+            <div class="dailytitle">Wind Speed</div>
+        </div>
+        <div id="dailyweatherbox">
+            <div id="dailytimebox"></div>
+            <div id="dailydescriptionbox"></div>
+            <div id="dailytempbox"></div>
+            <div id="dailyfeelslikebox"></div>
+            <div id="dailyhumiditybox"></div>
+            <div id="dailywindbox"></div>
+        </div>
     </div>
     <div id="footer">Made with love, by Ed</div>
     
