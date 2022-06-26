@@ -2,7 +2,6 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 2vh;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -18,6 +17,32 @@ body {
     width: 100vw;
 }
 
+#logo {
+    min-height: 10vh;
+    width: auto;
+}
+
+#getweather {
+    font-size: 2.5vh;
+}
+
+#choosecity {
+    min-height: 3vh;
+    min-width: 20vw;
+}
+
+.currentimg {
+    width: 2vw;
+    height: auto;
+}
+
+#descriptionimg {
+    width: auto;
+    min-height: 10vh;
+    grid-area: descriptionimg;
+    padding-left: 3vw;
+}
+
 #currentweatherbox, #dailyweatherbox {
     width: 100vw;
 }
@@ -28,7 +53,7 @@ body {
     'city inputbox currenttemperature'
     'currenttime . currentfeelslike'
     'currentdescription . currenthumidity'
-    '. . currentwind';
+    'descriptionimg . currentwind';
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     height: 45vh;
@@ -36,6 +61,11 @@ body {
     padding-left: 3vw;
     padding-right: 3vw;
     align-items: center;
+    font-size: 3vh;
+}
+
+.currenttitles {
+    font-size: 2.5vh;
 }
 
 #city {
@@ -77,13 +107,16 @@ body {
 #dailycontainer {
     display: flex;
     flex-direction: row;
+    padding-top: 5vh;
 }
 
 #dailytitles {
     display: flex;
     flex-direction: column;
-    gap: 3vh;
+    gap: 2vh;
     padding-left: 3vw;
+    font-weight: 700;
+    font-size: 2.5vh;
 }
 
 .dailytitle {
@@ -96,7 +129,7 @@ body {
     overflow-x: scroll;
     padding-left: 4vw;
     padding-right: 4vw;
-    gap:3vh;
+    gap:2vh;
     flex-grow: 1;
     height: 40vh;
 }
@@ -106,6 +139,7 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     height: 4vh;
+    font-size: 2.5vh;
 }
 
 .singleweatherbox {
@@ -121,6 +155,8 @@ body {
 #header {
     height: 10vh;
     padding-left: 3vw;
+    font-size: 6vh;
+    font-style: italic;
 }
 
 #footer {
