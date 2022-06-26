@@ -12,33 +12,34 @@
 </head>
 <body>
     <script src="main.js" defer></script>
-    <div id="header">The Condis Channel</div>
+    <div id="header"><img src="icons/logo.svg" alt="logo" id="logo"> The Condis Channel</div>
     <div id="currentweatherbox">
         <div id="city"></div>
         <div id="inputbox"> 
             <input type="text" name="choosecity" id="choosecity">
-            <button id="getweather">Get Weather</button>
+            <button id="getweather">Get Condis</button>
             <div id="errorbox"></div>
         </div>
         <div class="current" id="currenttempbox">
-            <div>Temperature</div>
-            <div id="temp"></div>
+            <div class="currenttitles">Temperature</div>
+            <img src="icons/temp.svg" class="currentimg"><span id="temp"></span>
         </div>
         <div id="currenttime"></div>
         <div class="current" id="currentfeelslikebox">
-            <div>Feels like</div>
-            <div id="feelslike"></div>
+            <div class="currenttitles">Feels like</div>
+            <img src="icons/temp.svg" class="currentimg"><span id="feelslike"></span>
         </div>
         <div class="current" id="currentdescriptionbox">
             <div id="description"></div>
         </div>
+        <img class="currentimg" id="descriptionimg">
         <div class="current" id="currenthumiditybox">
-            <div>Humidity</div>
-            <div id="humidity"></div>
+            <div class="currenttitles">Humidity</div>
+            <img src='icons/humid.svg' class="currentimg"><span id="humidity"></span>
         </div>
         <div class="current" id="currentwindbox">
-            <div>Wind speed</div>
-            <div id="wind"></div>
+            <div class="currenttitles">Wind speed</div>
+            <img src="icons/wind.svg" class="currentimg"><span id="wind"></span>
         </div>
     </div>
     <div id="dailycontainer">
