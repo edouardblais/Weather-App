@@ -6,6 +6,7 @@ const displayDailyWeather = (dailyWeatherResults) => {
   const humiditybox = document.getElementById('dailyhumiditybox');
   const windbox = document.getElementById('dailywindbox');
   let time = 3;
+  let day = 0;
 
   timebox.innerHTML = '';
   descriptionbox.innerHTML = '';
@@ -16,7 +17,20 @@ const displayDailyWeather = (dailyWeatherResults) => {
 
   for (let i = 0; i < 40; i += 1) {
     const singletime = document.createElement('div');
-    singletime.innerText = `in ${time} h`;
+    if (time % 24 === 0) {
+      day = (time / 24);
+    }
+    if (day === 0) {
+      singletime.innerText = `in ${time} hours`;
+    } else if (time === 48 || time === 72 || time === 96 || time === 120) {
+      singletime.innerText = `in ${day} days`;
+    } else if (time === 24) {
+      singletime.innerText = 'in a day';
+    } else if (day === 1) {
+      singletime.innerText = `in a day\n and ${time - 24} hours`;
+    } else {
+      singletime.innerText = `in ${day} days\n and ${time - (day * 24)} hours`;
+    }
     singletime.classList.add('singleweatherbox');
     time += 3;
     timebox.appendChild(singletime);
