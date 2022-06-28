@@ -16,9 +16,9 @@
     <div id="currentweatherbox">
         <div id="city"></div>
         <div id="inputbox"> 
-            <input type="text" name="choosecity" id="choosecity">
-            <button id="getweather">Get Condis</button>
-            <div id="errorbox"></div>
+            <input type="text" name="choosecity" id="choosecity" placeholder="Enter a location">
+            <img id="getweather" src="icons/magnify.svg">
+            <div id="errorbox" aria-live="polite"></div>
         </div>
         <div class="current" id="currenttempbox">
             <div class="currenttitles">Temperature</div>
@@ -26,7 +26,7 @@
         </div>
         <div id="currenttime"></div>
         <div class="current" id="currentfeelslikebox">
-            <div class="currenttitles">Feels like</div>
+            <div class="currenttitles">Feels Like</div>
             <img src="icons/temp.svg" class="currentimg"><span id="feelslike"></span>
         </div>
         <div class="current" id="currentdescriptionbox">
@@ -38,7 +38,7 @@
             <img src='icons/humid.svg' class="currentimg"><span id="humidity"></span>
         </div>
         <div class="current" id="currentwindbox">
-            <div class="currenttitles">Wind speed</div>
+            <div class="currenttitles">Wind Speed</div>
             <img src="icons/wind.svg" class="currentimg"><span id="wind"></span>
         </div>
     </div>
@@ -47,7 +47,7 @@
             <div class="dailytitle">Time</div>
             <div class="dailytitle">Description</div>
             <div class="dailytitle">Temperature</div>
-            <div class="dailytitle">Feels like</div>
+            <div class="dailytitle">Feels Like</div>
             <div class="dailytitle">Humidity</div>
             <div class="dailytitle">Wind Speed</div>
         </div>
@@ -60,7 +60,7 @@
             <div id="dailywindbox"></div>
         </div>
     </div>
-    <div id="footer">Made with love, by Ed</div>
+    <div id="footer">Made with <img src="icons/heart.svg" class="whiteicon"> by Ed | 2022</div>
     
 </body>
 </html>

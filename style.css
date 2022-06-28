@@ -17,18 +17,52 @@ body {
     width: 100vw;
 }
 
+input::placeholder {
+    color: black;
+    font-size: 2.5vh;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    font-style: italic;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
 #logo {
     min-height: 10vh;
     width: auto;
 }
 
 #getweather {
-    font-size: 2.5vh;
+    height: 5vh;
+    width: auto;
+    grid-area: search;
 }
 
+#getweather:hover {
+    cursor: pointer;
+}
+
+
 #choosecity {
-    min-height: 3vh;
-    min-width: 20vw;
+    min-height: 5vh;
+    font-size: 2.5vh;
+    background-color: transparent;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    border-color: black;
+    grid-area: inputbox;
+    padding-left: .5vw;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    color: black;
+}
+
+#errorbox {
+    grid-area: errorbox;
+    font-size: 2.5vh;
+    color: red;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 .currentimg {
@@ -50,18 +84,20 @@ body {
 #currentweatherbox {
     display: grid;
     grid-template-areas: 
-    'city inputbox currenttemperature'
-    'currenttime . currentfeelslike'
-    'currentdescription . currenthumidity'
-    'descriptionimg . currentwind';
-    grid-template-columns: 1fr 3fr 1fr;
+    'currenttime inputbox currenttemperature currenthumidity'
+    'city . currentfeelslike currentwind'
+    'descriptionimg . . .'
+    'currentdescription . . .';
+    grid-template-columns: 2fr 4fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    height: 45vh;
+    height: 35vh;
     justify-items:flex-start;
     padding-left: 3vw;
     padding-right: 3vw;
     align-items: center;
     font-size: 3vh;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    margin-bottom: 5vh;
 }
 
 .currenttitles {
@@ -71,11 +107,19 @@ body {
 #city {
     grid-area: city;
     padding-left: 3vw;
+    font-size: 5vh;
+    font-weight: 700;
 }
 
 #inputbox {
     grid-area: inputbox;
     justify-self: center;
+    display: grid;
+    grid-template-areas: 
+    'inputbox search'
+    'errorbox errorbox';
+    grid-template-columns: 10fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 #currentdescriptionbox {
@@ -90,6 +134,7 @@ body {
 #currenttime {
     grid-area: currenttime;
     padding-left: 3vw;
+    font-size: 2.5vh;
 }
 
 #currenthumiditybox {
@@ -107,7 +152,10 @@ body {
 #dailycontainer {
     display: flex;
     flex-direction: row;
-    padding-top: 5vh;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    height: 40vh;
+    margin-bottom: 2vh;
 }
 
 #dailytitles {
@@ -120,25 +168,23 @@ body {
 }
 
 .dailytitle {
-    height: 4vh;
+    height: 5vh;
 }
 
 #dailyweatherbox {
     display: flex;
     flex-direction: column;
     overflow-x: scroll;
-    padding-left: 4vw;
-    padding-right: 4vw;
+    margin-left: 3vw;
     gap:2vh;
     flex-grow: 1;
-    height: 40vh;
 }
 
 #dailytimebox, #dailytempbox, #dailydescriptionbox, #dailyfeelslikebox, #dailyhumiditybox, #dailywindbox {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    height: 4vh;
+    height: 5vh;
     font-size: 2.5vh;
     text-align: center;
 }
@@ -158,9 +204,31 @@ body {
     padding-left: 3vw;
     font-size: 6vh;
     font-style: italic;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: white;
+    padding-bottom: 5vh;
 }
 
 #footer {
     justify-content: center;
     height: 5vh;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-style: italic;
+    font-size: 2vh;
+}
+
+.whiteicon {
+    filter: invert(100%) sepia(2%) saturate(1%) hue-rotate(85deg) brightness(105%) contrast(100%);
+    height: 3vh;
+    width: auto;
+}
+
+::-webkit-scrollbar {
+    width: 2vh;
+}
+
+::-webkit-scrollbar-thumb {
+    background: whitesmoke;
+    border-radius: 2vh;
 }
