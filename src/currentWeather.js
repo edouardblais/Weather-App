@@ -13,8 +13,12 @@ const currentWeather = (() => {
     };
   }
 
-  function inputError() {
-    errorbox.innerText = 'Oops! The place you tried to search for could not be found.';
+  function inputError(cityname) {
+    if (cityname === '') {
+      errorbox.innerText = 'Please enter a location';
+    } else {
+      errorbox.innerText = 'Oops! Location could not be found';
+    }
   }
 
   function clearError() {
@@ -32,7 +36,7 @@ const currentWeather = (() => {
       const APIdata = getSpecificData(databylatlon);
       return APIdata;
     } catch (error) {
-      inputError();
+      inputError(cityname);
       console.log(error);
       return null;
     }

@@ -21,15 +21,15 @@ const displayDailyWeather = (dailyWeatherResults) => {
       day = (time / 24);
     }
     if (day === 0) {
-      singletime.innerText = `in ${time} hours`;
+      singletime.innerText = `In ${time} hours`;
     } else if (time === 48 || time === 72 || time === 96 || time === 120) {
-      singletime.innerText = `in ${day} days`;
+      singletime.innerText = `In ${day} days`;
     } else if (time === 24) {
-      singletime.innerText = 'in a day';
+      singletime.innerText = 'In a day';
     } else if (day === 1) {
-      singletime.innerText = `in a day\n and ${time - 24} hours`;
+      singletime.innerText = `In ${day} day\n and ${time - 24} hours`;
     } else {
-      singletime.innerText = `in ${day} days\n and ${time - (day * 24)} hours`;
+      singletime.innerText = `In ${day} days\n and ${time - (day * 24)} hours`;
     }
     singletime.classList.add('singleweatherbox');
     time += 3;
@@ -38,7 +38,7 @@ const displayDailyWeather = (dailyWeatherResults) => {
 
   dailyWeatherResults.weatherdescription.forEach((descrip) => {
     const singledescrip = document.createElement('div');
-    singledescrip.innerText = descrip;
+    singledescrip.innerText = (descrip.charAt(0).toUpperCase() + descrip.slice(1));
     singledescrip.classList.add('singleweatherbox');
     descriptionbox.appendChild(singledescrip);
   });

@@ -3,8 +3,8 @@ import dailyWeather from './dailyWeather';
 import displayCurrentWeather from './displayCurrentWeather';
 import displayDailyWeather from './displayDailyWeather';
 
-const button = document.getElementById('getweather');
-button.addEventListener('click', async () => {
+const search = document.getElementById('getweather');
+search.addEventListener('click', async () => {
   const input = document.getElementById('choosecity');
   const currentWeatherResult = await currentWeather.getAPIData(input.value);
   console.log(currentWeatherResult);
