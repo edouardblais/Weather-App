@@ -3,6 +3,7 @@ const displayDailyWeather = (dailyWeatherResults) => {
   const descriptionbox = document.getElementById('dailydescriptionbox');
   const tempbox = document.getElementById('dailytempbox');
   const feelslikebox = document.getElementById('dailyfeelslikebox');
+  const rainpercbox = document.getElementById('dailyrainpercbox');
   const humiditybox = document.getElementById('dailyhumiditybox');
   const windbox = document.getElementById('dailywindbox');
   let time = 3;
@@ -12,6 +13,7 @@ const displayDailyWeather = (dailyWeatherResults) => {
   descriptionbox.innerHTML = '';
   tempbox.innerHTML = '';
   feelslikebox.innerHTML = '';
+  rainpercbox.innerHTML = '';
   humiditybox.innerHTML = '';
   windbox.innerHTML = '';
 
@@ -53,6 +55,12 @@ const displayDailyWeather = (dailyWeatherResults) => {
     singlefeels.innerText = `${(feels - 273.15).toFixed(0)} °C`;
     singlefeels.classList.add('singleweatherbox');
     feelslikebox.appendChild(singlefeels);
+  });
+  dailyWeatherResults.rainperc.forEach((perc) => {
+    const singleperc = document.createElement('div');
+    singleperc.innerText = `${(perc)} %`;
+    singleperc.classList.add('singleweatherbox');
+    rainpercbox.appendChild(singleperc);
   });
   dailyWeatherResults.airhumidity.forEach((hum) => {
     const singlehum = document.createElement('div');

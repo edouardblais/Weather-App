@@ -161,10 +161,11 @@ textarea:focus, input:focus{
 #dailytitles {
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    gap: 1vh;
     padding-left: 3vw;
     font-weight: 700;
     font-size: 2.5vh;
+    min-width: 15vw;
 }
 
 .dailytitle {
@@ -175,12 +176,11 @@ textarea:focus, input:focus{
     display: flex;
     flex-direction: column;
     overflow-x: scroll;
-    margin-left: 3vw;
-    gap:2vh;
+    gap:1vh;
     flex-grow: 1;
 }
 
-#dailytimebox, #dailytempbox, #dailydescriptionbox, #dailyfeelslikebox, #dailyhumiditybox, #dailywindbox {
+#dailytimebox, #dailytempbox, #dailydescriptionbox, #dailyfeelslikebox, #dailyhumiditybox, #dailywindbox, #dailyrainpercbox {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -190,7 +190,7 @@ textarea:focus, input:focus{
 }
 
 .singleweatherbox {
-    min-width: 11vw;
+    min-width: 10.5vw;
 }
 
 #header, #footer {

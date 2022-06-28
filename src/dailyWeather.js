@@ -5,16 +5,18 @@ const dailyWeather = (() => {
     const airhumidity = [];
     const wind = [];
     const weatherdescription = [];
+    const rainperc = [];
     databylatlon.list.forEach((timeslot) => {
       temperature.push(timeslot.main.temp);
       feelslike.push(timeslot.main.feels_like);
       airhumidity.push(timeslot.main.humidity);
       wind.push(timeslot.wind.speed);
       weatherdescription.push(timeslot.weather[0].description);
+      rainperc.push(timeslot.pop);
     });
 
     return {
-      temperature, feelslike, airhumidity, wind, weatherdescription,
+      temperature, feelslike, airhumidity, wind, weatherdescription, rainperc,
     };
   }
 
