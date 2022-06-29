@@ -15,6 +15,7 @@ const displayDailyWeather = (dailyWeatherResults) => {
 
   timebox.innerHTML = '';
   descriptionbox.innerHTML = '';
+  imgbox.innerHTML = '';
   tempbox.innerHTML = '';
   feelslikebox.innerHTML = '';
   rainpercbox.innerHTML = '';

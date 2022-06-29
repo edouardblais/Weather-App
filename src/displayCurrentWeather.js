@@ -8,12 +8,11 @@ const displayCurrentWeather = (currentWeatherResult) => {
   const feelsliketemp = document.getElementById('feelslike');
   const humidity = document.getElementById('humidity');
   const windspeed = document.getElementById('wind');
-  const input = document.getElementById('choosecity').value;
   const img = document.getElementById('descriptionimg');
 
   const today = format(new Date(), 'PPPPp');
   currenttime.innerText = today;
-  city.innerText = (input.charAt(0).toUpperCase() + input.slice(1)) || 'Montreal';
+  city.innerText = (`${currentWeatherResult.cityname}, ${currentWeatherResult.countryname}`) || 'Montreal';
   description.innerText = (currentWeatherResult.weatherdescription.charAt(0).toUpperCase() + currentWeatherResult.weatherdescription.slice(1));
   temp.innerText = `${(currentWeatherResult.temperature - 273.15).toFixed(0)} °C`;
   feelsliketemp.innerText = `${(currentWeatherResult.feelslike - 273.15).toFixed(0)} °C`;

@@ -7,9 +7,11 @@ const currentWeather = (() => {
     const airhumidity = databylatlon.main.humidity;
     const wind = databylatlon.wind.speed;
     const weatherdescription = databylatlon.weather[0].description;
+    const countryname = databylatlon.sys.country;
+    const cityname = databylatlon.name;
 
     return {
-      temperature, feelslike, airhumidity, wind, weatherdescription,
+      temperature, feelslike, airhumidity, wind, weatherdescription, countryname, cityname,
     };
   }
 
