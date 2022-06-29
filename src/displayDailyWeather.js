@@ -1,13 +1,17 @@
+import addHours from 'date-fns/addHours';
+import { format } from 'date-fns';
+import roundToNearestMinutes from 'date-fns/roundToNearestMinutes';
+
 const displayDailyWeather = (dailyWeatherResults) => {
   const timebox = document.getElementById('dailytimebox');
   const descriptionbox = document.getElementById('dailydescriptionbox');
+  const imgbox = document.getElementById('dailyimgbox');
   const tempbox = document.getElementById('dailytempbox');
   const feelslikebox = document.getElementById('dailyfeelslikebox');
   const rainpercbox = document.getElementById('dailyrainpercbox');
   const humiditybox = document.getElementById('dailyhumiditybox');
   const windbox = document.getElementById('dailywindbox');
-  let time = 3;
-  let day = 0;
+  let time = new Date();
 
   timebox.innerHTML = '';
   descriptionbox.innerHTML = '';
@@ -19,22 +23,11 @@ const displayDailyWeather = (dailyWeatherResults) => {
 
   for (let i = 0; i < 40; i += 1) {
     const singletime = document.createElement('div');
-    if (time % 24 === 0) {
-      day = (time / 24);
-    }
-    if (day === 0) {
-      singletime.innerText = `In ${time} hours`;
-    } else if (time === 48 || time === 72 || time === 96 || time === 120) {
-      singletime.innerText = `In ${day} days`;
-    } else if (time === 24) {
-      singletime.innerText = 'In a day';
-    } else if (day === 1) {
-      singletime.innerText = `In ${day} day\n and ${time - 24} hours`;
-    } else {
-      singletime.innerText = `In ${day} days\n and ${time - (day * 24)} hours`;
-    }
+    time = addHours(time, 3);
+    const roundtime = roundToNearestMinutes(time, { nearestTo: 30 });
+    const formattedtime = format(roundtime, 'eeee p');
+    singletime.innerText = formattedtime;
     singletime.classList.add('singleweatherbox');
-    time += 3;
     timebox.appendChild(singletime);
   }
 
@@ -42,7 +35,23 @@ const displayDailyWeather = (dailyWeatherResults) => {
     const singledescrip = document.createElement('div');
     singledescrip.innerText = (descrip.charAt(0).toUpperCase() + descrip.slice(1));
     singledescrip.classList.add('singleweatherbox');
+    singledescrip.style.fontWeight = '700';
+    const img = document.createElement('img');
+    if (descrip === 'scattered clouds' || descrip === 'few clouds') {
+      img.src = 'icons/partlycloudy.svg';
+    } else if (descrip === 'broken clouds' || descrip === 'overcast clouds') {
+      img.src = 'icons/cloudy.svg';
+    } else if (descrip === 'clear sky') {
+      img.src = 'icons/sunny.svg';
+    } else if (descrip === 'light rain') {
+      img.src = 'icons/rainy.svg';
+    } else if (descrip === 'moderate rain' || descrip === 'heavy intensity rain') {
+      img.src = 'icons/pouring.svg';
+    }
+    img.classList.add('dailyimg');
+    img.classList.add('singleweatherbox');
     descriptionbox.appendChild(singledescrip);
+    imgbox.appendChild(img);
   });
   dailyWeatherResults.temperature.forEach((temps) => {
     const singletemp = document.createElement('div');
