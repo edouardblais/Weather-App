@@ -19,6 +19,7 @@
             <input type="text" name="choosecity" id="choosecity" placeholder="Enter a location">
             <img id="getweather" src="icons/magnify.svg">
             <div id="errorbox" aria-live="polite"></div>
+            <div id="loading"></div>
         </div>
         <div class="current" id="currenttempbox">
             <div class="currenttitles">Temperature</div>
@@ -44,8 +45,9 @@
     </div>
     <div id="dailycontainer">
         <div id="dailytitles">
-            <div class="dailytitle">Time</div>
-            <div class="dailytitle">Description</div>
+            <div class="dailytitle"></div>
+            <div class="dailytitle"></div>
+            <div class="dailytitle"></div>
             <div class="dailytitle">Temperature</div>
             <div class="dailytitle">Feels Like</div>
             <div class="dailytitle">Probability of Rain</div>
@@ -55,6 +57,7 @@
         <div id="dailyweatherbox">
             <div id="dailytimebox"></div>
             <div id="dailydescriptionbox"></div>
+            <div id="dailyimgbox"></div>
             <div id="dailytempbox"></div>
             <div id="dailyfeelslikebox"></div>
             <div id="dailyrainpercbox"></div>
