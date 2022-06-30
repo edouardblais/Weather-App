@@ -68,7 +68,7 @@ const displayDailyWeather = (dailyWeatherResults) => {
   });
   dailyWeatherResults.rainperc.forEach((perc) => {
     const singleperc = document.createElement('div');
-    singleperc.innerText = `${(perc)} %`;
+    singleperc.innerText = `${(perc * 100)} %`;
     singleperc.classList.add('singleweatherbox');
     rainpercbox.appendChild(singleperc);
   });
