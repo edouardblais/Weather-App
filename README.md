@@ -1,3 +1,5 @@
+#The Condis Channel
+
 "The Condis Channel" is a web app to obtain weather information for the city of your choice!
 
 Simply enter your desired location in the search bar to get the current weather as well as the forecast for the next 5 days.
