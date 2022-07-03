@@ -1,4 +1,4 @@
-#The Condis Channel
+# The Condis Channel
 
 "The Condis Channel" is a web app to obtain weather information for the city of your choice!
 
