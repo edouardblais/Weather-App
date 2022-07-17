@@ -9,6 +9,7 @@ It also makes use of webpack for module bundling and the date-fns library for da
 
 The learning goal here was to familiarize myself with APIs and promises. 
 
+See it in action here: https://edouardblais.github.io/Weather-App/ 
 Enjoy!
 
 ![CondisChannel](https://user-images.githubusercontent.com/101145093/177020579-d5023ae4-6079-496a-b1ba-b2a2f16c6a84.JPG)
